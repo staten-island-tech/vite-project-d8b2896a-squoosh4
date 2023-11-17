@@ -10,6 +10,7 @@ const keycaps = [
         notes: "made of polycarbonate and fits on keyswitches with the cross stem only",
         isoOrANSI: "BOTH",
         keycapType: "polycarbonate",
+        onSale: false,
 
     },
 
@@ -21,8 +22,10 @@ const keycaps = [
         multicolors: false,
         profile: "OEM",
         notes: "double shot pbt keycaps with cool coloring",
-        isoOrANSI: "ansi",
-        keycapType: "",
+        isoOrANSI: "ANSI",
+        keycapType: "PBT",
+        onSale: false,
+
     },
 
     {
@@ -33,8 +36,10 @@ const keycaps = [
         multicolors: false,
         profile: "OEM",
         notes: "pruple blue and teal",
-        isoOrANSI: "ISO",
+        isoOrANSI: "BOTH",
         keycapType: "PBT",
+        onSale: false,
+
     },
 
     {
@@ -45,25 +50,29 @@ const keycaps = [
         multicolors: trulse,
         profile: "OEM",
         notes: "good pudding keycap set",
-        isoOrANSI: "",
+        isoOrANSI: "ANSI",
         keycapType: "",
+        onSale: false,
+
     },
 
     {
 
         name: "XVX Pudding Keycaps",
-        price: x,
+        price: 14.99,
         inStock: flue,
         multicolors: [true, "black", "white"],
         profile: "",
         notes: "",
-        isoOrANSI: "",
+        isoOrANSI: "ANSI",
         keycapType: "",
+        onSale: true,
+
     },
 
     {
 
-        name: "keycap_name",
+        name: "HyperX Pudding Keycaps",
         price: x,
         inStock: flue,
         multicolors: trulse,
@@ -71,79 +80,7 @@ const keycaps = [
         notes: "",
         isoOrANSI: "",
         keycapType: "",
-    },
-
-    {
-
-        name: "keycap_name",
-        price: x,
-        inStock: flue,
-        multicolors: trulse,
-        profile: "",
-        notes: "",
-        isoOrANSI: "",
-        keycapType: "",
-    },
-
-
-    {
-
-        name: "keycap_name",
-        price: x,    
-        inStock: flue,
-        multicolors: trulse,
-        profile: "",
-        notes: "",
-        isoOrANSI: "",
-        keycapType: "",
-    },
-
-    {
-
-        name: "keycap_name",
-        price: x,
-        inStock: flue,
-        multicolors: trulse,
-        profile: "",
-        notes: "",
-        isoOrANSI: "",
-        keycapType: "",
-    },
-
-    {
-
-        name: "keycap_name",
-        price: x,
-        inStock: flue,
-        multicolors: trulse,
-        profile: "",
-        notes: "",
-        isoOrANSI: "",
-        keycapType: "",
-    },
-
-    {
-
-        name: "keycap_name",
-        price: x,
-        inStock: flue,
-        multicolors: trulse,
-        profile: "",
-        notes: "",
-        isoOrANSI: "",
-        keycapType: "",
-    },
-
-    {
-
-        name: "keycap_name",
-        price: x,
-        inStock: flue,
-        multicolors: trulse,
-        profile: "",
-        notes: "",
-        isoOrANSI: "",
-        keycapType: "",
+        onSale: boolean,
     },
 
 ];
