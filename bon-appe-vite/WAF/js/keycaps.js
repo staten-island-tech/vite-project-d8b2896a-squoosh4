@@ -1,4 +1,4 @@
-const keycaps = [
+export const keycaps = [
 
     {
 
