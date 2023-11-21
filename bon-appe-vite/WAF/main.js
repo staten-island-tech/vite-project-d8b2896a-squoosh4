@@ -1,25 +1,33 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+
+cardObj = {
+
+    name: keycap.name,
+    price: keycap.price,
+    onSale: keycap.onSale,
+    profile: keycap.profile,
+    inStock: keycap.inStock,
+
+}
 
 document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
+DOMSelector.gallery.insertAdjacentHTML(
+  "beforeend",
+  `
+  `
+  
+);
 `
 
-setupCounter(document.querySelector('#counter'))
-game.foreach((i)=> )
+keycaps.forEach((keycap) => DOMSelector.gallery.insertAdjacentHTML(
+  "beforeend",
+  `
+  <div class="keycap-card">
+    <p>"${keycap.name}"</p>
+    <p>"${keycap.price}"</p>
+    <p>"${keycap.onSale}"</p>
+    <p>"${keycap.profile}"</p>
+    <p>"${keycap.inStock}"</p>
+  </div>
+  `
+));

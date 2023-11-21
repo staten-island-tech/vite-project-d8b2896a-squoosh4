@@ -84,3 +84,5 @@ const keycaps = [
     },
 
 ];
+
+export keycaps as keycapObj;
