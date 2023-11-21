@@ -11,6 +11,7 @@ export const keycaps = [
         isoOrANSI: "BOTH",
         keycapType: "polycarbonate",
         onSale: false,
+        isPudding: false,
 
     },
 
@@ -25,6 +26,7 @@ export const keycaps = [
         isoOrANSI: "ANSI",
         keycapType: "PBT",
         onSale: false,
+        isPudding: false,
 
     },
 
@@ -39,6 +41,7 @@ export const keycaps = [
         isoOrANSI: "BOTH",
         keycapType: "PBT",
         onSale: false,
+        isPudding: false,
 
     },
 
@@ -46,13 +49,14 @@ export const keycaps = [
 
         name: "Ducky Black Pudding 108 Key",
         price: 39.00,
-        inStock: flue,
-        multicolors: trulse,
+        inStock: true,
+        multicolors: false,
         profile: "OEM",
         notes: "good pudding keycap set",
         isoOrANSI: "ANSI",
-        keycapType: "",
+        keycapType: "PBT",
         onSale: false,
+        isPudding: true,
 
     },
 
@@ -60,13 +64,14 @@ export const keycaps = [
 
         name: "XVX Pudding Keycaps",
         price: 14.99,
-        inStock: flue,
+        inStock: true,
         multicolors: [true, "black", "white"],
         profile: "OEM",
-        notes: "budget pudding keycap set with a good typeface for the legending    ",
+        notes: "budget pudding keycap set with a good typeface for the legending",
         isoOrANSI: "ANSI",
-        keycapType: "",
+        keycapType: "PBT",
         onSale: true,
+        isPudding: true,
 
     },
 
@@ -74,13 +79,15 @@ export const keycaps = [
 
         name: "HyperX Pudding Keycaps",
         price: x,
-        inStock: flue,
-        multicolors: trulse,
+        inStock: false,
+        multicolors: [true, "black", "white"],
         profile: "OEM",
-        notes: "",
-        isoOrANSI: "",
-        keycapType: "",
+        notes: "budget pudding keycap set with a meh typeface for the legending",
+        isoOrANSI: "ANSI",
+        keycapType: "PBT",
         onSale: boolean,
+        isPudding: true,
+
     },
 
 ];

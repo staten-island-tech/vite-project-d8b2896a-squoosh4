@@ -1,29 +1,37 @@
 import './style.css'
-import keycap from keycaps
+import { keycaps } from './js/keycaps'
+import { DOMSelector } from './js/domselector'
 
 cardObj = {
 
-    name: keycap.name,
-    price: keycap.price,
-    onSale: keycap.onSale,
-    profile: keycap.profile,
-    inStock: keycap.inStock,
+    name: keycaps.name,
+    price: keycaps.price,
+    onSale: keycaps.onSale,
+    profile: keycaps.profile,
+    inStock: keycaps.inStock,
 
 }
 
-document.querySelector('#app').innerHTML = `
-DOMSelector.gallery.insertAdjacentHTML(
-  "beforeend",
-  `
-  `
-  
-);
+document.querySelector('#app').innerHTML =
 `
+  <div class="button-holder">
+    
+    <button id="iso"></button>
+    <button id="ansi"></button>
+    <button id="oem"></button>
+    <button id="oem"></button>
+    <button id="oem"></button>
+    <button id="oem"></button>
+  
+  </div>
+    `
+;
 
-keycaps.forEach((keycap) => DOMSelector.gallery.insertAdjacentHTML(
+
+keycaps.forEach((keycap) => DOMSelector.app.insertAdjacentHTML(
   "beforeend",
   `
-  <div class="keycap-card">
+  <div class="keycap-card" id="${keycap.name}">
     <p>"${keycap.name}"</p>
     <p>"${keycap.price}"</p>
     <p>"${keycap.onSale}"</p>
@@ -32,3 +40,4 @@ keycaps.forEach((keycap) => DOMSelector.gallery.insertAdjacentHTML(
   </div>
   `
 ));
+
