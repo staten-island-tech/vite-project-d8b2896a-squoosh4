@@ -1,6 +1,6 @@
-import './style.css'
-import { keycaps } from './js/keycaps'
-import { DOMSelector } from './js/domselector'
+import './css/style.css'
+import { keycaps } from './js/keycaps.js'
+import { DOMSelector } from './js/domselector.js'
 
 cardObj = {
 
@@ -12,8 +12,8 @@ cardObj = {
 
 }
 
-document.querySelector('#app').innerHTML =
-`
+document.querySelector('#app').innerHTML = `
+  
   <div class="button-holder">
     
     <button id="iso"></button>
@@ -24,8 +24,8 @@ document.querySelector('#app').innerHTML =
     <button id="oem"></button>
   
   </div>
-    `
-;
+`
+
 
 
 keycaps.forEach((keycap) => DOMSelector.app.insertAdjacentHTML(
