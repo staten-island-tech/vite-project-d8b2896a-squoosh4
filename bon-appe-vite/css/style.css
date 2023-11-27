@@ -34,7 +34,21 @@
 
 }
 
-.keycap-card
-{
+.keycap-card{ 
+  border-color: var(--border);
+  background-color: var(--primary);
+}
 
+body{
+  
+  background-color: var(--background);
+  
+}
+
+button{
+  color: var(--button);
+}
+
+p{
+  color: var(--text);
 }

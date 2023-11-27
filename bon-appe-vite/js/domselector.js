@@ -7,12 +7,12 @@ export const DOMSelector = {
         ansiButton: document.getElementById("ansi"),
         puddingButton: document.getElementById("pudding"),
         inStockButton: document.getElementById("in-stock"),
-        Button: document.getElementById("on-sale"),
-        Button: document.getElementById("buttonSOrtCriteria"),
-        Button: document.getElementById("buttonSortCriteria"),
-        Button: document.getElementById("buttonSortCriteria"),
-        Button: document.getElementById("buttonSortCriteria"),
+        onSaleButton: document.getElementById("on-sale"),
+        purpleMintThemeButton: document.getElementById("purple-mint"),
+        darkThemeButton: document.getElementById("dark"),
+        // Button: document.getElementById("buttonSortCriteria"),
+        // Button: document.getElementById("buttonSortCriteria"),
 
     }
 
-};
+};  

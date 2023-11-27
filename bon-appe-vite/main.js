@@ -2,37 +2,40 @@ import './css/style.css'
 import { keycaps } from './js/keycaps.js'
 import { DOMSelector } from './js/domselector.js'
 
-cardObj = {
+  // cardObj = {
 
-    name: keycaps.name,
-    price: keycaps.price,
-    onSale: keycaps.onSale,
-    profile: keycaps.profile,
-    inStock: keycaps.inStock,
+  //     name: keycaps.name,
+  //     price: keycaps.price,
+  //     onSale: keycaps.onSale,
+  //     profile: keycaps.profile,
+  //     inStock: keycaps.inStock,
 
-}
+  // }
 
 document.querySelector('#app').innerHTML = `
   
   <div class="button-holder">
-    
-    <button id="iso"></button>
-    <button id="ansi"></button>
-    <button id="oem"></button>
-    <button id="oem"></button>
-    <button id="oem"></button>
-    <button id="oem"></button>
-  
+    <button id="iso">iso layout</button>
+    <button id="ansi">ansi layout</button>
+    <button id="oem">oem profile</button>
+    <button id="in-stock">in stock items</button>
+    <button id="on-sale">discounted items</button>
+    <button id="purple-mint">purple mint theme</button>
+    <button id="dark">dark theme</button>
   </div>
 `
+DOMSelector.buttons.purpleMintThemeButton.addEventListener("click", function(event){
 
+  event.preventDefault();
+  
+
+});
 
 
 keycaps.forEach((keycap) => DOMSelector.app.insertAdjacentHTML(
   "beforeend",
   `
   <div class="keycap-card" id="${keycap.name}">
-    <p>"${keycap.name}"</p>
     <p>"${keycap.price}"</p>
     <p>"${keycap.onSale}"</p>
     <p>"${keycap.profile}"</p>
