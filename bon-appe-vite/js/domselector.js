@@ -13,6 +13,7 @@ export const DOMSelector = {
         // Button: document.getElementById("buttonSortCriteria"),
         // Button: document.getElementById("buttonSortCriteria"),
 
-    }
+    },
+    body: document.body,
 
 };  

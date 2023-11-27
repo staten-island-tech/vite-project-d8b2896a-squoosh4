@@ -27,9 +27,17 @@ document.querySelector('#app').innerHTML = `
 DOMSelector.buttons.purpleMintThemeButton.addEventListener("click", function(event){
 
   event.preventDefault();
-  
+  DOMSelector.body.classList.add(purple-mint-theme)
 
 });
+
+DOMSelector.buttons.darkThemeButton.addEventListener("click", function(event){
+
+  event.preventDefault();
+  DOMSelector.body.classList.add(dark-theme)
+  
+});
+
 
 
 keycaps.forEach((keycap) => DOMSelector.app.insertAdjacentHTML(
