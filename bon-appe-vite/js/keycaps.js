@@ -78,14 +78,14 @@ export const keycaps = [
     {
 
         name: "HyperX Pudding Keycaps",
-        price: x,
+        price: 14.99,
         inStock: false,
         multicolors: [true, "black", "white"],
         profile: "OEM",
         notes: "budget pudding keycap set with a meh typeface for the legending",
         isoOrANSI: "ANSI",
         keycapType: "PBT",
-        onSale: boolean,
+        onSale: false,
         isPudding: true,
 
     },

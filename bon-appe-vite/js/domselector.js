@@ -1,6 +1,5 @@
 export const DOMSelector = {
 
-    app: document.getElementById("app"),
     buttons: {
 
         isoButton: document.getElementById("iso"),
@@ -15,5 +14,7 @@ export const DOMSelector = {
 
     },
     body: document.body,
+    cardHolder: document.querySelector(".card-holder"),
+    keycapCard: document.querySelectorAll(".keycap-card")
 
 };  

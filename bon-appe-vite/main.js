@@ -12,43 +12,43 @@ import { DOMSelector } from './js/domselector.js'
 
   // }
 
-document.querySelector('#app').innerHTML = `
-  
-  <div class="button-holder">
-    <button id="iso">iso layout</button>
-    <button id="ansi">ansi layout</button>
-    <button id="oem">oem profile</button>
-    <button id="in-stock">in stock items</button>
-    <button id="on-sale">discounted items</button>
-    <button id="purple-mint">purple mint theme</button>
-    <button id="dark">dark theme</button>
-  </div>
-`
+
 DOMSelector.buttons.purpleMintThemeButton.addEventListener("click", function(event){
 
-  event.preventDefault();
-  DOMSelector.body.classList.add(purple-mint-theme)
+  DOMSelector.body.classList.add("purple-mint-theme")
+  DOMSelector.body.classList.remove("dark-theme")
 
 });
 
 DOMSelector.buttons.darkThemeButton.addEventListener("click", function(event){
 
-  event.preventDefault();
-  DOMSelector.body.classList.add(dark-theme)
+  DOMSelector.body.classList.add("dark-theme")
+  DOMSelector.body.classList.remove("purple-mint-theme")
   
 });
 
 
 
-keycaps.forEach((keycap) => DOMSelector.app.insertAdjacentHTML(
+keycaps.forEach((keycap) => DOMSelector.cardHolder.insertAdjacentHTML(
   "beforeend",
   `
-  <div class="keycap-card" id="${keycap.name}">
-    <p>"${keycap.price}"</p>
-    <p>"${keycap.onSale}"</p>
-    <p>"${keycap.profile}"</p>
-    <p>"${keycap.inStock}"</p>
+  <div class="keycap-card" id="${keycap.profile} ${keycap.isoOrANSI}">
+    <p>${keycap.price}</p>
+    <p>${keycap.onSale}</p>
+    <p>${keycap.profile}</p>
+    <p>${keycap.inStock}</p>
   </div>
   `
 ));
 
+function onlyShowThis(onlyShowThis){
+  document.querySelectorAll("#" + onlyShowThis);
+  DOMSelector.keycapCard.forEach((card) => keycapCard.innerHTML.style("display: hidden"))
+  DOMSelector.keycapCard.forEach((card) => card.filter((wantedCard) => wantedCard.classList.contains(onlyShowThis)))
+}
+
+DOMSelector.buttons.forEach((btn) => btn.addEventListener("click", function(event){
+
+  onlyShowThis(btn.id);
+
+}))
