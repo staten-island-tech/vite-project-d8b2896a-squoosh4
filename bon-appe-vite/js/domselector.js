@@ -9,6 +9,7 @@ export const DOMSelector = {
         onSaleButton: document.getElementById("on-sale"),
         purpleMintThemeButton: document.getElementById("purple-mint"),
         darkThemeButton: document.getElementById("dark"),
+        choccoMintThemeButton: document.getElementById("chocco-mint")
         // Button: document.getElementById("buttonSortCriteria"),
         // Button: document.getElementById("buttonSortCriteria"),
 

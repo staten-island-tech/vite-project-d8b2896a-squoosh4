@@ -29,14 +29,23 @@ DOMSelector.buttons.darkThemeButton.addEventListener("click", function(event){
 
 
 
-keycaps.forEach((keycap) => DOMSelector.cardHolder.insertAdjacentHTML(
+keycaps.forEach((keycap) => DOMSelector.body.insertAdjacentHTML(
   "beforeend",
   `
-  <div class="keycap-card" id="${keycap.profile} ${keycap.isoOrANSI}">
-    <p>${keycap.price}</p>
-    <p>${keycap.onSale}</p>
-    <p>${keycap.profile}</p>
-    <p>${keycap.inStock}</p>
+  <div class="keycap-card" id="${keycap.profile} ${keycap.name}">
+    <p>$${keycap.price}</p>
+    <p>on sale:
+    ${//if (keycap.onSale === true) {
+    //    this.innerHTML = `
+    //    on sale!
+    //    `
+    // }
+    keycap.onSale}
+    </p>
+    <p>${keycap.profile} profile</p>
+    <p>in stock: ${keycap.inStock}</p>
+    <p>multiple colorways: ${keycap.multicolors[0]}</p>
+    <div class="data">
   </div>
   `
 ));

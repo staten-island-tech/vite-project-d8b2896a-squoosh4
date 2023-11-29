@@ -1,3 +1,42 @@
+.purple-mint-theme{
+
+  --primary: #c792df;
+  --border: #950f4d;
+  --background: #2e2d4d;
+  --button: #6bbaec;
+  --text: #73fbd3;
+
+}
+
+.chocco-mint-theme{
+
+  --primary: #5f3d0b;
+  --border: #57f59e;
+  --background: #5f3319;
+  --button: #83623c;
+  --text: #73fbd3;
+
+}
+
+.dark-theme{
+  
+  --primary: #000000;
+  --border: #ffffff;
+  --background: #303030;
+  --button: #000000;
+  --text: #ffffff;
+
+}
+
+/*.alt-dark-theme{
+    
+    --primary: #323232;
+    --border: #434343;
+    --background: #000000;
+    --button: #ffffff;
+    --text: #ffffff;
+
+}*/ 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -6,28 +45,7 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-}
-
-.purple-mint-theme{
-
-    --primary: #c792df;
-    --border: #950f4d;
-    --background: #2e2d4d;
-    --button: #6becc5;
-    --text: #73fbd3;
-
-}
-
-.dark-theme{
-    
-    --primary: #323232;
-    --border: #434343;
-    --background: #000000;
-    --button: #ffffff;
-    --text: #ffffff;
-
 }
 
 .keycap-card{ 
