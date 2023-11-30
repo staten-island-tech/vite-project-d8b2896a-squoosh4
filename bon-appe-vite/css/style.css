@@ -34,7 +34,7 @@
 .purple-mint-theme {
 
 	--primary: #c792df;
-	--border: #950f4d;
+	--border: #ec79b3;
 	--background: #2e2d4d;
 	--button: #6bbaec;
 	--text: #73fbd3;
@@ -54,6 +54,8 @@
 	-webkit-text-size-adjust: 100%;
 
 }
+
+.card-holder { display: flex; }
 
 .keycap-card {
 
@@ -78,11 +80,11 @@ body {
 
 button {
 
-	background-color: var(--background);
+	background-color: var(--border);
 	border: solid 4px;
 	border-color: var(--border);
 	border-radius: 4px;
-	color: var(--text);
+	color: var(--background);
 
 }
 
