@@ -65,8 +65,24 @@ keycaps.forEach((keycap) => DOMSelector.body.insertAdjacentHTML(
     `
 ));
 
-DOMSelector.buttons.forEach((btn) => btn.addEventListener("click", function(event){
+DOMSelector.buttons.ansiButton((btn) => btn.addEventListener("click", function(event){
 
   onlyShowThis(btn.id);
 
 }))
+
+DOMSelector.buttons.isoButtonButton((btn) => btn.addEventListener("click", function(event){
+
+  onlyShowThis(btn.id);
+
+}))
+
+DOMSelector.buttons.inStockButtonButton((btn) => btn.addEventListener("click", function(event){
+
+  onlyShowThis(btn.id);
+
+}))
+
+DOMSelector.buttons.onSaleButton.addEventListener(click, function(event){
+  onlyShowThis(btn.id);
+})
