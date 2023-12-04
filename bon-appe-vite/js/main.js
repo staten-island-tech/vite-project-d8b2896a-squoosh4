@@ -11,35 +11,40 @@ import { DOMSelector } from './domselector.js'
   //     inStock: keycaps.inStock,
 
   // }
-
-  keycaps.forEach((keycap) => DOMSelector.body.insertAdjacentHTML(
+function cardCreate(arr){
+  arr.forEach((item) => DOMSelector.cardHolder.insertAdjacentHTML(
     "beforeend",
     `
-      <div class="keycap-card" id="${keycap.profile} ${keycap.name} ${keycap.onSale}">
-        <p>${keycap.name}</p>
-        <p>$${keycap.price}</p>
+      <div class="keycap-card" id="${item.profile} ${item.name} ${item.onSale}">
+        <p>${item.name}</p>
+        <p>$${item.price}</p>
         <p>on sale:
-        ${//if (keycap.onSale === true) {
+        ${//if (item.onSale === true) {
         //    this.innerHTML = `
         //    on sale!
         //    `
         // }
-        keycap.onSale}
+        item.onSale}
         </p>
-        <p>iso/ansi: ${keycap.isoOrANSI}</p>
-        <p>${keycap.profile} profile</p>
-        <p>in stock: ${keycap.inStock}</p>
-        <p>multiple colorways: ${keycap.multicolors[0]}</p>
+        <p>iso/ansi: ${item.isoOrANSI}</p>
+        <p>${item.profile} profile</p>
+        <p>in stock: ${item.inStock}</p>
+        <p>multiple colorways: ${item.multicolors[0]}</p>
       </div>
     `
 ));
+};
 
+cardCreate(keycaps);
 
 function onlyShowThis(onlyShowThis){
 
 	//document.querySelectorAll("#" + onlyShowThis);
-	DOMSelector.keycapCard.forEach((card) => { if (card.id.contains(onlyShowThis) === false)  
-    card.innerHTML.style.display("none")});
+	//DOMSelector.keycapCard.forEach((card) => { if (card.id !== onlyShowThis)  
+  //  card.innerHTML.style.display("none")});
+  DOMSelector.cardHolder.innerHTML="";
+  const wanted_thing = keycaps.filter((card) => card.id === onlyShowThis);
+  cardCreate(wanted_thing);
 
 }
   
@@ -73,21 +78,21 @@ DOMSelector.buttons.ansiButton.addEventListener("click", function(event){
   onlyShowThis(ansi);
   console.log("click");
 
-})
+});
 
 DOMSelector.buttons.isoButton.addEventListener("click", function(event){
 
   onlyShowThis(iso);
   console.log("click");
 
-})
+});
 
 DOMSelector.buttons.oemButton.addEventListener("click", function(event){
 
   onlyShowThis(oem);
   console.log("click");
 
-})
+});
 
 //DOMSelector.buttons.inStockButtonButton.addEventListener("click", function(event){
 //
