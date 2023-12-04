@@ -43,54 +43,75 @@ function onlyShowThis(onlyShowThis){
 	//DOMSelector.keycapCard.forEach((card) => { if (card.id !== onlyShowThis)  
   //  card.innerHTML.style.display("none")});
   DOMSelector.cardHolder.innerHTML="";
-  const wanted_thing = keycaps.filter((card) => card.id === onlyShowThis);
+  const wanted_thing = keycaps.filter((card) => keycaps.includes(onlyShowThis));
   cardCreate(wanted_thing);
 
-}
+};
   
 DOMSelector.buttons.choccoMintThemeButton.addEventListener("click", function(event){
 
-    DOMSelector.body.classList.add("chocco-mint-theme")
-    DOMSelector.body.classList.remove("dark-theme")
-    DOMSelector.body.classList.remove("purple-mint-theme")
+    DOMSelector.body.classList.add("chocco-mint-theme");
+    DOMSelector.body.classList.remove("dark-theme");
+    DOMSelector.body.classList.remove("purple-mint-theme");
     
 });
 
 DOMSelector.buttons.darkThemeButton.addEventListener("click", function(event){
 
-    DOMSelector.body.classList.remove("chocco-mint-theme")
-    DOMSelector.body.classList.add("dark-theme")
-    DOMSelector.body.classList.remove("purple-mint-theme")
+    DOMSelector.body.classList.remove("chocco-mint-theme");
+    DOMSelector.body.classList.add("dark-theme");
+    DOMSelector.body.classList.remove("purple-mint-theme");
   
 });
 
 DOMSelector.buttons.purpleMintThemeButton.addEventListener("click", function(event){
 
-	DOMSelector.body.classList.remove("chocco-mint-theme")
-	DOMSelector.body.classList.remove("dark-theme")
-	DOMSelector.body.classList.add("purple-mint-theme")
+	DOMSelector.body.classList.remove("chocco-mint-theme");
+	DOMSelector.body.classList.remove("dark-theme");
+	DOMSelector.body.classList.add("purple-mint-theme");
 
 });
 
 
 DOMSelector.buttons.ansiButton.addEventListener("click", function(event){
 
-  onlyShowThis(ansi);
   console.log("click");
+  DOMSelector.cardHolder.innerHTML="";
+  const wanted_thing = keycaps.filter((card) => card.isoOrANSI === "ansi");
+  cardCreate(wanted_thing);
+  if (wanted_thing.length === 0) {
+    DOMSelector.cardHolder.innerHTML=`
+    <p>nothing fits that womp womp</p>
+    `
+  };
 
 });
 
 DOMSelector.buttons.isoButton.addEventListener("click", function(event){
 
-  onlyShowThis(iso);
   console.log("click");
+  DOMSelector.cardHolder.innerHTML="";
+  const wanted_thing = keycaps.filter((card) => card.isoOrANSI === "iso");
+  cardCreate(wanted_thing);
+  if (wanted_thing.length === 0) {
+    DOMSelector.cardHolder.innerHTML=`
+    <p>nothing fits that womp womp</p>
+    `
+  };
 
 });
 
 DOMSelector.buttons.oemButton.addEventListener("click", function(event){
 
-  onlyShowThis(oem);
   console.log("click");
+  DOMSelector.cardHolder.innerHTML="";
+  const wanted_thing = keycaps.filter((card) => card.profile === oem);
+  cardCreate(wanted_thing);
+  if (wanted_thing.length === 0) {
+    cardHolder.innerHTML=`
+    <p>nothing fits that womp womp</p>
+    `
+  };
 
 });
 
