@@ -4,6 +4,8 @@ export const DOMSelector = {
 
         isoButton: document.getElementById("iso"),
         ansiButton: document.getElementById("ansi"),
+        oemButton: document.getElementById("oem"),
+        asaButton: document.getElementById("asa"),
         puddingButton: document.getElementById("pudding"),
         inStockButton: document.getElementById("in-stock"),
         onSaleButton: document.getElementById("on-sale"),
