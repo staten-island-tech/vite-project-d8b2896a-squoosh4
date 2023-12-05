@@ -77,7 +77,7 @@ DOMSelector.buttons.ansiButton.addEventListener("click", function(event){
 
   console.log("click");
   DOMSelector.cardHolder.innerHTML="";
-  const wanted_thing = keycaps.filter((card) => card.isoOrANSI === "ansi");
+  const wanted_thing = keycaps.filter((card) => card.isoOrANSI === "ansi" || "both");
   cardCreate(wanted_thing);
   if (wanted_thing.length === 0) {
     DOMSelector.cardHolder.innerHTML=`
@@ -91,7 +91,7 @@ DOMSelector.buttons.isoButton.addEventListener("click", function(event){
 
   console.log("click");
   DOMSelector.cardHolder.innerHTML="";
-  const wanted_thing = keycaps.filter((card) => card.isoOrANSI === "iso");
+  const wanted_thing = keycaps.filter((card) => card.isoOrANSI === "iso" || "both");
   cardCreate(wanted_thing);
   if (wanted_thing.length === 0) {
     DOMSelector.cardHolder.innerHTML=`
@@ -114,6 +114,14 @@ DOMSelector.buttons.oemButton.addEventListener("click", function(event){
   };
 
 });
+
+DOMSelector.buttons.defaultSortButton.addEventListener("click", function(event){
+
+  console.log("click")
+  DOMSelector.cardHolder.innerHTML="";
+  cardCreate(keycaps);
+  
+})
 
 //DOMSelector.buttons.inStockButtonButton.addEventListener("click", function(event){
 //
