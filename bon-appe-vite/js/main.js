@@ -12,6 +12,8 @@ import { DOMSelector } from './domselector.js'
 
   // }
 function cardCreate(arr){
+
+  DOMSelector.cardHolder.innerHTML=""
   arr.forEach((item) => DOMSelector.cardHolder.insertAdjacentHTML(
     "beforeend",
     `
@@ -75,8 +77,7 @@ DOMSelector.buttons.purpleMintThemeButton.addEventListener("click", function(eve
 
 DOMSelector.buttons.ansiButton.addEventListener("click", function(event){
 
-  console.log("click");
-  DOMSelector.cardHolder.innerHTML="";
+  console.log("ansi click");
   const wanted_thing = keycaps.filter((card) => card.isoOrANSI === "ansi" || "both");
   cardCreate(wanted_thing);
   if (wanted_thing.length === 0) {
@@ -89,8 +90,7 @@ DOMSelector.buttons.ansiButton.addEventListener("click", function(event){
 
 DOMSelector.buttons.isoButton.addEventListener("click", function(event){
 
-  console.log("click");
-  DOMSelector.cardHolder.innerHTML="";
+  console.log("iso click");
   const wanted_thing = keycaps.filter((card) => card.isoOrANSI === "iso" || "both");
   cardCreate(wanted_thing);
   if (wanted_thing.length === 0) {
@@ -103,8 +103,7 @@ DOMSelector.buttons.isoButton.addEventListener("click", function(event){
 
 DOMSelector.buttons.oemButton.addEventListener("click", function(event){
 
-  console.log("click");
-  DOMSelector.cardHolder.innerHTML="";
+  console.log("oem click");
   const wanted_thing = keycaps.filter((card) => card.profile === oem);
   cardCreate(wanted_thing);
   if (wanted_thing.length === 0) {
