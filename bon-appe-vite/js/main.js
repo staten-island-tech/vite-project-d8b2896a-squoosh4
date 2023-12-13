@@ -44,9 +44,9 @@ function onlyShowThis(onlyShowThis) {
 	//document.querySelectorAll("#" + onlyShowThis);
 	//DOMSelector.keycapCard.forEach((card) => { if (card.id !== onlyShowThis)  
 	//  card.innerHTML.style.display("none")});
-	DOMSelector.cardHolder.innerHTML = "";
-	const wanted_thing = keycaps.filter((card) => keycaps.includes(onlyShowThis));
-	cardCreate(wanted_thing);
+	//DOMSelector.cardHolder.innerHTML = "";
+	//const wanted_thing = keycaps.filter((card) => keycaps.idList.includes(onlyShowThis));
+	//cardCreate(wanted_thing);
 
 };
 
@@ -77,43 +77,40 @@ DOMSelector.buttons.purpleMintThemeButton.addEventListener("click", function (ev
 
 });
 
+function errorChecker(arr) {
+
+	if (wanted_thing.length === 0) {
+		DOMSelector.cardHolder.innerHTML = `
+    <p>nothing fits that womp womp</p>
+    `};
+
+};
+
 
 DOMSelector.buttons.ansiButton.addEventListener("click", function (event) {
 
 	console.log("ansi click");
 	const wanted_thing = keycaps.filter((card) => card.isoOrANSI === "ansi" || "both");
 	cardCreate(wanted_thing);
-	if (wanted_thing.length === 0) {
-		DOMSelector.cardHolder.innerHTML = `
-    <p>nothing fits that womp womp</p>
-    `
-	};
-
+	errorChecker(wanted_thing);
+	
 });
 
 DOMSelector.buttons.isoButton.addEventListener("click", function (event) {
 
 	console.log("iso click");
-	const wanted_thing = keycaps.filter((card) => card.isoOrANSI === "iso" || "both");
+	const wanted_thing = keycaps.filter((card) => card.isoOrANSI === "both");
 	cardCreate(wanted_thing);
-	if (wanted_thing.length === 0) {
-		DOMSelector.cardHolder.innerHTML = `
-    <p>nothing fits that womp womp</p>
-    `
-	};
+	errorChecker(wanted_thing);
 
 });
 
 DOMSelector.buttons.oemButton.addEventListener("click", function (event) {
 
 	console.log("oem click");
-	const wanted_thing = keycaps.filter((card) => card.profile === oem);
+	const wanted_thing = keycaps.filter((card) => card.profile === "oem");
 	cardCreate(wanted_thing);
-	if (wanted_thing.length === 0) {
-		cardHolder.innerHTML = `
-    <p>nothing fits that womp womp</p>
-    `
-	};
+	errorChecker(wanted_thing);
 
 });
 
@@ -123,7 +120,7 @@ DOMSelector.buttons.defaultSortButton.addEventListener("click", function (event)
 	DOMSelector.cardHolder.innerHTML = "";
 	cardCreate(keycaps);
 
-})
+});
 
 //DOMSelector.buttons.inStockButtonButton.addEventListener("click", function(event){
 //
